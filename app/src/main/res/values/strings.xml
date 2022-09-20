@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">WordGame</string>
+    <string name="edit_message">Enter a message</string>
+    <string name="button_submit">Submit</string>
+    <string name="edit_noun">Noun</string>
+    <string name="edit_adjective">Adjective</string>
+    <string name="edit_verb">Verb</string>
+    <string name="edit_professor">Professor</string>
+    <string name="edit_athlete">Athlete</string>
+    <string name="edit_number">Number 2 to 100</string>
+    <string name="edit_food">Food</string>
+    <string name="edit_holiday">Holiday</string>
+    <string name="word_list_message">Enter the following types of words to make a crazy story! Don\'t hit submit until ALL the blanks have been filled in!</string>
+    <string name="story">Oftentimes it can be hard to choose the right ____________ to visit, but with your ____________ skills it can be made much easier! First, you should ____________ alongside ____________________. After that, you can ask ________________ to go to your favorite restaurant with you to eat ________________. Lastly, the most important step is to visit ______ different ____________ stores!</string>
+</resources>
