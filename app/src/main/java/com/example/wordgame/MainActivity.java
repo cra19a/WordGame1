@@ -4,18 +4,19 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
-    public static final String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
-    public static final String EXTRA_MESSAGE2 = "com.example.myfirstapp.MESSAGE2";
-    public static final String EXTRA_MESSAGE3 = "com.example.myfirstapp.MESSAGE3";
-    public static final String EXTRA_MESSAGE4 = "com.example.myfirstapp.MESSAGE4";
-    public static final String EXTRA_MESSAGE5 = "com.example.myfirstapp.MESSAGE5";
-    public static final String EXTRA_MESSAGE6 = "com.example.myfirstapp.MESSAGE6";
-    public static final String EXTRA_MESSAGE7 = "com.example.myfirstapp.MESSAGE7";
-    public static final String EXTRA_MESSAGE8 = "com.example.myfirstapp.MESSAGE8";
+    public static final String EXTRA_MESSAGE = "Noun";
+    public static final String EXTRA_MESSAGE_2 = "Adjective";
+    public static final String EXTRA_MESSAGE_3 = "Verb";
+    public static final String EXTRA_MESSAGE_4 = "Professor";
+    public static final String EXTRA_MESSAGE_5 = "Athlete";
+    public static final String EXTRA_MESSAGE_6 = "Number";
+    public static final String EXTRA_MESSAGE_7 = "Food";
+    public static final String EXTRA_MESSAGE_8 = "Holiday";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,43 +26,58 @@ public class MainActivity extends AppCompatActivity {
 
     /** Called when the user taps the Send button */
     public void sendMessage(View view) {
-        Intent intent = new Intent(this, DisplayMessageActivity.class);
-        EditText editText = (EditText) findViewById(R.id.EditNoun);
-        String message = editText.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE, message);
-        startActivity(intent);
 
-        String message2 = editText.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE2, message2);
+        // everything else works except THIS: the data validation right under.
+        // worked on it for a while, searched up solutions but just can't get it right.
+            //if (TextUtils.isEmpty(editText.getText().toString())) {
 
-        Intent intent3 = new Intent(this, DisplayMessageActivity.class);
-        EditText editText3 = (EditText) findViewById(R.id.EditNoun);
-        String message3 = editText.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE3, message3);
+            Intent intent = new Intent(this, DisplayMessageActivity.class);
 
-        Intent intent4 = new Intent(this, DisplayMessageActivity.class);
-        EditText editText4 = (EditText) findViewById(R.id.EditNoun);
-        String message4 = editText.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE4, message4);
+            // noun
+            EditText editText = (EditText) findViewById(R.id.EditNoun);
+            String message = editText.getText().toString();
+            intent.putExtra(EXTRA_MESSAGE, message);
 
-        Intent intent5 = new Intent(this, DisplayMessageActivity.class);
-        EditText editText5 = (EditText) findViewById(R.id.EditNoun);
-        String message5 = editText.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE5, message5);
+            // adjective
+            EditText editText2 = (EditText) findViewById(R.id.EditAdjective);
+            String message2 = editText2.getText().toString();
+            intent.putExtra(EXTRA_MESSAGE_2, message2);
 
-        Intent intent6 = new Intent(this, DisplayMessageActivity.class);
-        EditText editText6 = (EditText) findViewById(R.id.EditNoun);
-        String message6 = editText.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE6, message6);
+            // verb
+            EditText editText3 = (EditText) findViewById(R.id.EditVerb);
+            String message3 = editText3.getText().toString();
+            intent.putExtra(EXTRA_MESSAGE_3, message3);
 
-        Intent intent7 = new Intent(this, DisplayMessageActivity.class);
-        EditText editText7 = (EditText) findViewById(R.id.EditNoun);
-        String message7 = editText.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE7, message7);
+            // professor
+            EditText editText4 = (EditText) findViewById(R.id.EditProfessor);
+            String message4 = editText4.getText().toString();
+            intent.putExtra(EXTRA_MESSAGE_4, message4);
 
-        Intent intent8 = new Intent(this, DisplayMessageActivity.class);
-        EditText editText8 = (EditText) findViewById(R.id.EditNoun);
-        String message8 = editText.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE8, message8);
+            // athlete
+            EditText editText5 = (EditText) findViewById(R.id.EditAthlete);
+            String message5 = editText5.getText().toString();
+            intent.putExtra(EXTRA_MESSAGE_5, message5);
+
+            // number
+            EditText editText6 = (EditText) findViewById(R.id.EditNumber);
+            String message6 = editText6.getText().toString();
+            intent.putExtra(EXTRA_MESSAGE_6, message6);
+
+            // food
+            EditText editText7 = (EditText) findViewById(R.id.EditFood);
+            String message7 = editText7.getText().toString();
+            intent.putExtra(EXTRA_MESSAGE_7, message7);
+
+            // holiday
+            EditText editText8 = (EditText) findViewById(R.id.EditHoliday);
+            String message8 = editText8.getText().toString();
+            intent.putExtra(EXTRA_MESSAGE_8, message8);
+
+            startActivity(intent);
+        // }
+
+        // else {
+        //    return;
+        // }
     }
 }

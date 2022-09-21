@@ -131,7 +131,7 @@
         android:background="@color/CRA_orange"
         android:onClick="sendMessage"
         android:text="@string/button_submit"
-        android:textColor="@color/white"
+        android:textColor="#795548"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
